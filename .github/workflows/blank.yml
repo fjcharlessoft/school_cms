@@ -222,12 +222,12 @@ jobs:
           # 编译
 
 
-          bash ${WORK_ROOT_DIR}/myutils/schoolmgr_cms/scripts/build_server.sh ${JENKINS_ENV_PATH} || CheckLastResult
+          bash ${WORK_ROOT_DIR}/myutils/schoolmgr_cms/scripts/build_server.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
           
           
           
           # 发布
-          bash ${WORK_ROOT_DIR}/myutils/schoolmgr_cms/scripts/publish_server.sh ${JENKINS_ENV_PATH} || CheckLastResult
+          bash ${WORK_ROOT_DIR}/myutils/schoolmgr_cms/scripts/publish_server.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
           
           
           
