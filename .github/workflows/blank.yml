@@ -222,30 +222,30 @@ jobs:
           # 编译
 
 
-          bash ${WORKSPACE}/myutils/schoolmgr_cms/scripts/build_server.sh ${JENKINS_ENV_PATH} || CheckLastResult
+          bash ${${WORK_ROOT_DIR}}/myutils/schoolmgr_cms/scripts/build_server.sh ${JENKINS_ENV_PATH} || CheckLastResult
           
           
           
           # 发布
-          bash ${WORKSPACE}/myutils/schoolmgr_cms/scripts/publish_server.sh ${JENKINS_ENV_PATH} || CheckLastResult
+          bash ${${WORK_ROOT_DIR}}/myutils/schoolmgr_cms/scripts/publish_server.sh ${JENKINS_ENV_PATH} || CheckLastResult
           
           
           
           
           # 编译web 系统
-          bash ${WORKSPACE}/myutils/schoolmgr_cms/scripts/build_web.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
+          bash ${${WORK_ROOT_DIR}}/myutils/schoolmgr_cms/scripts/build_web.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
           
           # 发布web系统
-          bash ${WORKSPACE}/myutils/schoolmgr_cms/scripts/publish_web.sh$WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
+          bash ${${WORK_ROOT_DIR}}/myutils/schoolmgr_cms/scripts/publish_web.sh$WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
           
           # 编译h5 web 系统
-          bash ${WORKSPACE}/myutils/schoolmgr_cms/scripts/build_h5_web.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
+          bash ${${WORK_ROOT_DIR}}/myutils/schoolmgr_cms/scripts/build_h5_web.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
           
           # 发布h5 web系统
-          bash ${WORKSPACE}/myutils/schoolmgr_cms/scripts/publish_h5_web.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
+          bash ${${WORK_ROOT_DIR}}/myutils/schoolmgr_cms/scripts/publish_h5_web.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
           
           # 部署
-          bash ${WORKSPACE}/myutils/schoolmgr_cms/scripts/guanlan/docker_deploy.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
+          bash ${${WORK_ROOT_DIR}}/myutils/schoolmgr_cms/scripts/guanlan/docker_deploy.sh $WORK_ROOT_DIR/.JENKINS.env || CheckLastResult
 
         working-directory: ./${{ github.event.client_payload.project_name }}
 
