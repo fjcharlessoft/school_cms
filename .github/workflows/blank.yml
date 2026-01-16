@@ -283,8 +283,8 @@ jobs:
       - name: Send dingding notify error
         uses: zcong1993/actions-ding@master
         with:
-          dingToken: ${{ github.event.client_payload.dding_token.token }} #钉钉token
-          secret: ${{ github.event.client_payload.dding_token.secret }}
+          dingToken: ${{ github.event.client_payload.token }} #钉钉token
+          secret: ${{ github.event.client_payload.secret }}
           body: |
             {
               "msgtype": "text",
@@ -303,8 +303,8 @@ jobs:
       - name: Send dingding notify success
         uses: zcong1993/actions-ding@master
         with:
-          dingToken: ${{ github.event.client_payload.dding_token.token }} #钉钉token
-          secret: ${{ github.event.client_payload.dding_token.secret }}
+          dingToken: ${{ github.event.client_payload.token }} #钉钉token
+          secret: ${{ github.event.client_payload.secret }}
           body: |
             {
              "msgtype": "text",
