@@ -90,8 +90,8 @@ jobs:
           cd ..
           
           # 克隆 myutils
-          git clone git@gitee.com:charlesabc/myutils.git ./${{  github.event.client_payload.project_name }}/myutils
-
+          # git clone git@gitee.com:charlesabc/myutils.git ./${{  github.event.client_payload.project_name }}/myutils 
+          git clone git@github.com:charlessoft/myutils.git ./${{  github.event.client_payload.project_name }}/myutils
           
          # # BRANCH_NAME=$(echo "${{ github.event.client_payload.mybranch }}" | sed 's|refs/heads/||')
          # # echo $BRANCH_NAME
